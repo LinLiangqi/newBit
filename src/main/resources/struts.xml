@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	
+
+	
+	<!-- 映射的第一层路径 
+	name="main":属性，取名字，值随意
+	namespace="/main"：属性，命名空间，用于对应请求的URL中的path
+	extends="struts-default":属性，固定取值为struts-default
+	http://localhost:8080/ssh/demo -->
+	<package name="main" namespace="/main"
+		extends="struts-default">
+	<!-- http://localhost:8080/ssh/demo/hello.action
+	   name属性：名字，值为请求的资源路径
+	   class属性：
+	   method属性：
+	 -->
+		<action name="index"
+			class="cn.tedu.ssh.action.HomeAction"
+			method="doAction">
+			<!--
+			result表示处理结果
+			name属性：
+			  -->
+			<result name="ok"> 
+				/WEB-INF/jsp/ok.jsp
+			</result>
+		</action>
+		
+			
+		
+		
+	</package>
+</struts>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
